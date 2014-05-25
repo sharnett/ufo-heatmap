@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta property="og:title" content="{% block ogtitle %}{{ SITENAME }}{%endblock%}"/>
+    <meta property="og:url" content="{% block ogurl %}{{ SITEURL }}{%endblock%}"/>
+    <meta property="og:site_name" content="{{ SITENAME }}"/>
+    <meta property="og:type" content="{% block ogtype %}website{%endblock%}"/>
+
+    <link rel="canonical" href="{% block canonicalurl %}{{ SITEURL }}{%endblock%}" />
+
+    <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+    {% if EXTRA_HEADER %}
+        {{ EXTRA_HEADER }}
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap-responsive.min.css" type="text/css" />
+
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" type="text/css" />
+
+</head>
+
+<body id="index">
+    <div class="row-fluid">
+        <div class="span10 offset1">
+            <header id="banner" >
+                <h1>
+                    <a href="{{ SITEURL }}/">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a>
+                </h1>
+            </header><!-- /#banner -->
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span10 offset1">
+            <div class="row-fluid">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+
+{% include 'analytics.html' %}
+{% include 'piwik.html' %}
+{% include 'disqus_script.html' %}
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
+</body>
+</html>
