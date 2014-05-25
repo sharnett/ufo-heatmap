@@ -10,17 +10,17 @@ Summary: A heatmap of UFO sightings in the USA, normalized by population. Introd
 
 In *Machine Learning for Hackers* by Drew Conway and John Myles White, they introduce a data set of UFO sightings as an example. Googling around for other work on this data set produces some heatmaps of the sightings, here is one from [flowingdata.com](http://flowingdata.com/2011/07/07/where-the-aliens-are-flying-their-ufos/):
 
-{% img /images/ufo_map_annotated1.png 600 %}
+{% img {filename}/images/ufo_map_annotated1.png 600 %}
 
 I was immediately reminded of the [XKCD comic](http://xkcd.com/1138/):
 
-![xkcd heatmap](/images/heatmap_xkcd.png)
+![xkcd heatmap]({filename}/images/heatmap_xkcd.png)
 
 I decided to try adjusting the UFO sightings data for population, something I've never done before. Are UFO sightings distributed according to population? Or do some areas get more than their fair share of sightings?
 
 ##TL;DR
 
-![my ufo heatmap](/images/ufo_sightings_normalized_smooth.png)
+![my ufo heatmap]({filename}/images/ufo_sightings_normalized_smooth.png)
 
 The western US gets a lot more sightings than the population would suggest, especially near Area 51. Read on to follow my data adventure.
 
@@ -28,7 +28,7 @@ The western US gets a lot more sightings than the population would suggest, espe
 
  I used Python to wrangle the data and ggplot2 from R to make the plots. The actual raw data looks like this:
 
-![my raw heatmap](/images/ufo_sightings_normalized_raw.png)
+![my raw heatmap]({filename}/images/ufo_sightings_normalized_raw.png)
 
 I explored a couple different ways to smooth that out and arrive at the final image, which all gave pretty much the same result. Specifically, I looked at: 
 

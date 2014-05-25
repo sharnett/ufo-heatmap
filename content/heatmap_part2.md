@@ -60,7 +60,7 @@ After a lengthy process, I arrive at a dataframe that looks like this:
 
 Plotting those raw rates on a map looks like this:
 
-![my raw heatmap](/images/ufo_sightings_normalized_raw.png)
+![my raw heatmap]({filename}/images/ufo_sightings_normalized_raw.png)
 
 Below are the steps I took:
 
